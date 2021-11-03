@@ -22,5 +22,6 @@ function refreshValue() {
  .then(res => {
    let rate = res.rates[to];
    document.getElementById("value").innerHTML = rate;
+   document.getElementById("value").innerHTML = document.getElementById("value").innerHTML.replace(".", ",");
  })
 }
