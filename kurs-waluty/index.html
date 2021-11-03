@@ -3,11 +3,13 @@
   <head>
     <title>Kurs waluty | Tymon Gumienik</title>
     <link rel="stylesheet" href="kurs-waluty/style.css" />
+    <link rel="stylesheet" href="animate.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="animate__animated animate__fadeInDown">
     <span id="top">AKTUALNY KURS WALUTY TO</span>
     <div class="spacer" />
-    <span id="value">15.3</span>
+    <span id="value"></span>
     
     <div id="currencies">
       <select id="from" onchange="updateFrom(this)">
@@ -66,6 +68,8 @@
       </select>
 
       <span class="spacer-horizontal" />
+      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      <span class="spacer-horizontal" />
       
       <select id="to" onchange="updateTo(this)">
         <option value="AED">AED</option>
@@ -123,8 +127,8 @@
       </select>
     </div>
         
-    <footer>
-      2021 Tymon Gumienik.<br>Dane pochodzą z <a href="https://exchangerate-api.com" target="_blank">ExchangeRate-API</a>.
+    <footer style="margin-top: 50px;">
+      2021 - Tymon Gumienik.<br>Dane pochodzą z <a href="https://exchangerate-api.com" target="_blank">ExchangeRate-API</a>.
     </footer>
     
     <script src="kurs-waluty/script.js"></script>

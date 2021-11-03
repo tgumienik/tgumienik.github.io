@@ -1,10 +1,26 @@
+let from = "USD";
+let to = "PLN";
+
+updateFrom(document.getElementById("from"));
+updateTo(document.getElementById("to"));
+
 refreshValue();
 
-var from = "USD";
-var to = "PLN";
+function updateFrom(select) {
+  from = select.value;
+  refreshValue();
+}
 
-function updateFrom()
+function updateTo(select) {
+  to = select.value;
+  refreshValue();
+}
 
 function refreshValue() {
-  
+ fetch(`https://api.exchangerate-api.com/v4/latest/${from}`)
+ .then(res => res.json())
+ .then(res => {
+   let rate = res.rates[to];
+   document.getElementById("value").innerHTML = rate;
+ })
 }
