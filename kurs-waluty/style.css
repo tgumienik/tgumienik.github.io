@@ -7,3 +7,37 @@ body {
   font-family: 'Roboto', sans-serif;
   margin-top: 50px;
 }
+
+#top{
+  font-size: 20px;
+}
+
+#value {
+  font-size: 100px;
+}
+
+#currencies{
+  margin-top: 30px;
+}
+
+.spacer {
+  margin-top: 10px;
+}
+
+.spacer-horizontal {
+  padding-left: 20px;
+}
+
+a:link {
+  color: lightgray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: lightgray;
+}
